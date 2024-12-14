@@ -49,3 +49,9 @@ ScrollReveal().reveal(".discover__card__content", {
     interval: 500,
     delay: 200,
 })
+
+// Blogs Container
+ScrollReveal().reveal(".blogs__card", {
+    duration: 1000,
+    interval: 400,
+});
