@@ -5,6 +5,14 @@
   box-sizing: border-box;
 }
 
+:root{
+  --primary-color: #0a0d14;
+  --primary-color-light: #20242f;
+  --secondary-color: #f49e09;
+  --extra-light: rgba(255,255,255,0.5);
+  --white: #ffffff;
+}
+
 header {
   min-height: 100vh;
   width: 100%;
@@ -18,7 +26,7 @@ header {
 nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 20px 7%;
 }
 
@@ -28,16 +36,22 @@ nav {
   cursor: pointer;
 }
 
-.nav-links li {
-  list-style: none;
-  display: inline-block;
-  margin: 10px 30px;
+.nav-links{
+  li {
+    list-style: none;
+    display: inline-block;
+    margin: 10px 30px;
+  }
+  li a {
+    text-decoration: none;
+    color: black;
+  }
+  li a:hover{
+    color: #f49e09;
+    border-bottom: 2px solid #f49e09;
+}
 }
 
-.nav-links li a {
-  text-decoration: none;
-  color: #fff;
-}
 
 .register-btn {
   background: #fff;
@@ -61,6 +75,19 @@ nav {
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.18);
+
+  p{
+    width: 80%;
+    padding: 1.5rem;
+    font-size: 1.3rem;
+    text-align: center;
+    text-shadow: 2px 2px 20px;
+    color: #152439;
+  }
+
+  h1{
+    padding: .5rem;
+  }
 }
 header h1 {
   display: block;
@@ -69,16 +96,10 @@ header h1 {
   color: #fff;
   text-align: center;
 }
-.container-ai p{
-  width: 80%;
-  font-size: 1.3rem;
-  text-align: center;
-  text-shadow: 2px 2px 20px;
-  color: #152439;
-}
+
 .search-bar {
   background: #fff;
-  width: 70%;
+  width: 50%;
   margin: 30px auto;
   padding: 6px 10px 6px 30px;
   border-radius: 50px;
@@ -87,6 +108,7 @@ header h1 {
 .search-bar form {
   display: flex;
   align-items: center;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
@@ -117,6 +139,25 @@ header h1 {
 
 .search-bar form label {
   font-weight: 600;
+}
+
+.btn{
+  padding: .75rem 1.5rem;
+  outline: none;
+  border: none;
+  border-radius: 100px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  cursor: pointer;
+  display:flex; 
+  align-content:center; 
+  gap:10px; 
+  img{
+      height: 25px; 
+      width: 25px;
+  }
 }
 
 /* exclusives */
