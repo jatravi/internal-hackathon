@@ -244,13 +244,13 @@ label{
 #AIImage {
   padding-left: 15px;
   position: absolute;
-  left: -10%;
+  left: -40%;
   filter: drop-shadow(2px 2px 10px black);
 }
 
 .user-chat-area {
   width: 90%;
-  padding: 15px;
+  padding: 5px;
   background-color: #e6ecff;
   border-top-left-radius: 40px;
   border-bottom-right-radius: 40px;
@@ -260,7 +260,7 @@ label{
 
 .ai-chat-area {
   width: 90%;
-  padding: 15px;
+  padding: 5px;
   background-color: #e6ecff;
   border-top-right-radius: 40px;
   border-bottom-right-radius: 40px;
