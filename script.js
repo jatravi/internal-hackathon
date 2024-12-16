@@ -73,7 +73,7 @@ let user={
     data:null,
 }
 
-const Api_URL="https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyABGS3fgQJ0kEDkgCo53uqtIC-yLnWbV8E"
+const Api_URL="https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyDQvTMLfR7XtwGuFNjvoaPqN-xE0Bm8Hi0"
 
 async function generateResponse(aiChatBox) {
     let text=aiChatBox.querySelector(".ai-chat-area")
@@ -130,7 +130,7 @@ setTimeout(()=>{
     let aiChatBox = createChatBox(html,"ai-chat")
     chatContainer.appendChild(aiChatBox)
     generateResponse(aiChatBox)
-},600)
+},200)
 }
 
 prompt.addEventListener("keydown",(e)=>{
