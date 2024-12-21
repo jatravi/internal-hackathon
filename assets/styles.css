@@ -60,7 +60,22 @@ nav {
   border-radius: 20px;
   text-decoration: none;
   font-size: 14px;
+  border: 1px solid #FF5361;
+  transition: all 0.3s ease;
 }
+
+.register-btn:hover {
+  background: #FF5361;
+  color: #fff;
+  border-color: #FF5361;
+}
+
+.register-btn:active {
+  background: #FF5361;
+  color: #fff;
+  transform: scale(0.98);
+}
+
 
 .container-ai {
   display: flex;
@@ -695,7 +710,7 @@ nav .fa-bars {
   }
 }
 
-/* ----listing---- */
+----listing----
 
 .navbar-white {
   background: #fff;
