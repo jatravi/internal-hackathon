@@ -138,3 +138,53 @@ prompt.addEventListener("keydown",(e)=>{
         handlechatResponse(prompt.value);
     }
 })
+// Route Finder
+
+
+function initializeRouteFinder() {
+    const form = document.getElementById("locationForm");
+    const mapElement = document.getElementById("locationMap");
+    const infoElement = document.getElementById("locationInfo");
+  
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+  
+      const from = document.getElementById("locationFrom").value;
+      const to = document.getElementById("locationTo").value;
+      mapElement.innerHTML = "";
+      infoElement.innerHTML = "";
+  
+      if (from && to) {
+        try {
+          const map = new google.maps.Map(mapElement, {
+            zoom: 7,
+            center: { lat: 28.6139, lng: 77.209 },
+          });
+  
+          const directionsService = new google.maps.DirectionsService();
+          const directionsRenderer = new google.maps.DirectionsRenderer();
+  
+          directionsRenderer.setMap(map);
+          const result = await directionsService.route({
+            origin: from,
+            destination: to,
+            travelMode: google.maps.TravelMode.DRIVING,
+          });
+  
+          directionsRenderer.setDirections(result);
+          const route = result.routes[0].legs[0];
+          infoElement.innerHTML = `
+            <p><strong>From:</strong> ${route.start_address}</p>
+            <p><strong>To:</strong> ${route.end_address}</p>
+            <p><strong>Distance:</strong> ${route.distance.text}</p>
+            <p><strong>Duration:</strong> ${route.duration.text}</p>
+          `;
+        } catch (error) {
+          infoElement.innerHTML = `<p style="color: red;">Error fetching route: ${error.message}</p>`;
+        }
+      } else {
+        infoElement.innerHTML = `<p style="color: red;">Please fill in both fields!</p>`;
+      }
+    });
+}
+  window.onload = initializeRouteFinder;
