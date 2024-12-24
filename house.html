@@ -36,21 +36,22 @@
     </nav>
 
     <div class="house-details">
-      <h3>Plan Your Route Dynamically</h3>
-      <div class="controls">
-        <input type="text" id="start" placeholder="Starting Location" />
-        <div id="stops"></div>
-        <button class="btn" id="addStop">Add Stop</button>
-        <input type="text" id="end" placeholder="Destination" />
-        <button onclick="calculateRoute()">Find Route</button>
-      </div>
-      <div class="map">
-        <h3>Location on map</h3>
-        <iframe
+      <div class="location-container">
+        <h1 class="location-title">Route Finder</h1>
+        <form class="location-form" id="locationForm">
+          <input type="text" id="locationFrom" placeholder="Enter Starting Point" required>
+          <input type="text" id="locationTo" placeholder="Enter Destination" required>
+          <button id="addStop">Add Stop</button>
+          <button type="submit">Show Route</button>
+        </form>
+        <div id="locationMap">
+          <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448181.5896180933!2d76.83806647230714!3d28.64667720000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd1ef2cdd3c7%3A0xc0117b92b43059e3!2sDelhi!5e0!3m2!1sen!2sin!4v1703413234567!5m2!1sen!2sin"
-          width="600" height="450" style="border: 0" allowfullscreen
+          width="750" height="350" style="border: 0" allowfullscreen
           loading="lazy"></iframe>
         <p>It's like a home away from home.</p>
+        </div>
+        <div class="location-info" id="locationInfo"></div>
       </div>
       <div class="house-title">
         <h1>Wenge House</h1>
