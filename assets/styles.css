@@ -243,12 +243,13 @@ header h1 {
 /*------------ AI Sarthi Bot------------------*/
 .slide {
   height: 100%;
-  width: 300px; /* Adjusted for a larger slide menu */
+  width: 100%; /* Adjusted for a larger slide menu */
   right: 0;
   position: absolute;
   background-color: #fff;
+  border-radius: 10px;
   transition: 0.5s ease;
-  transform: translateX(600px); /* Hidden initially */
+  transform: translateX(200%); /* Hidden initially */
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
