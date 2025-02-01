@@ -1,4 +1,4 @@
-# Travel Pal
+# Travel Sarthi
 
 A comprehensive AI-powered platform that simplifies travel planning by providing dynamic recommendations, collaborative tools, and detailed itineraries for travelers.
 ### Live at:-
@@ -16,7 +16,7 @@ Travelers often struggle with trip planning due to:
 
 ## Solution
 
-The Travel Pal offers:
+The Travel Sarthi offers:
 - **AI-Driven Recommendations**: Tailored suggestions for destinations, hotels, restaurants, and travel routes.
 - **Dynamic Itineraries**: Detailed travel plans, including time estimates, budget predictions, and transportation options.
 - **Collaboration Features**: Real-time trip planning with friends.
